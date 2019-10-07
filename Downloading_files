@@ -1,0 +1,5 @@
+cd /scratch_30_day_tmp/lmschent/
+mkdir Resource_Announcement
+cd Resource_Announcement
+gdown.pl https://drive.google.com/file/d/1cj-Trrc62XB5SgfRNQkj0QgDKwIx8ViC/edit Angola-27_S9_L001_R1_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/14CNdXmNe6umynWgBkFPiGmBT-LY6jept/edit Angola-27_s9_L001_R2_001.fastq.gz
