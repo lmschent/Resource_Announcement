@@ -4,7 +4,7 @@ cd Resource_Announcement
 gdown.pl https://drive.google.com/file/d/1cj-Trrc62XB5SgfRNQkj0QgDKwIx8ViC/edit Angola-27_S9_L001_R1_001.fastq.gz
 gdown.pl https://drive.google.com/file/d/14CNdXmNe6umynWgBkFPiGmBT-LY6jept/edit Angola-27_s9_L001_R2_001.fastq.gz
 cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o Angola-27_S9_L001_R1_001.cutadapt.fastq -p Angola-27_s9_L001_R2_001.cutadapt.fastq Angola-27_S9_L001_R1_001.fastq.gz Angola-27_s9_L001_R2_001.fastq.gz
-conda activate de_novo
+conda activate de_novo_assembly
 spades.py -k 21,51,71,91,111,127 --careful --pe1-1 Angola-27_S9_L001_R1_001.cutadapt.fastq --pe1-2 Angola-27_s9_L001_R2_001.cutadapt.fastq -o Angola-27_spades_output
 cd Angola-27_spades_output
 quast contigs.fasta -o Quast_contigs
