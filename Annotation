@@ -1,0 +1,4 @@
+cd Angola-27_spades_annotation
+awk '/^>/{print ">T1_" ++i; next}{print}' < contigs.fasta > contigs_names.fasta
+prokka --outdir T1 --prefix T1 contigs_names.fasta
+grep -c '>' contigs.fasta
